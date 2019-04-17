@@ -106,7 +106,7 @@ fn main() {
         cfg.include(&build);
     }
 
-    if target.contains("haiku") {
+    if !target.contains("darwin") {
         cfg.define("HAVE_POLL", None);
     }
 
